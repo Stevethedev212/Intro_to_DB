@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-MySQLServer.py
-Creates the database 'alx_book_store' in MySQL server.
+server.py
+Creates the database 'alxbookstore' in MySQL server.
 If the database already exists, the script will not fail.
 """
 
@@ -21,9 +21,9 @@ def create_database():
         if connection.is_connected():
             cursor = connection.cursor()
 
-            # 3. Create the database (safe way, won't fail if exists)
-            cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
-            print("Database 'alx_book_store' created successfully!")
+            # 3. Create the database (safe way)
+            cursor.execute("CREATE DATABASE IF NOT EXISTS alxbookstore")
+            print("Database 'alxbookstore' created successfully!")
 
     except Error as e:
         # 4. Handle connection errors
